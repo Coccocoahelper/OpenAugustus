@@ -465,13 +465,7 @@ public class KillAura
       this.hitBoxPercentageHorizontal1 = new DoubleValue(this, "HitBoxPercentageHorizontal1", 100.0, 1.0, 100.0, 0, this.rotations).named("HitBoxPercentageHorizontal").visibleWhen(() -> this.isNearestHitVecHorizontalVisible());
       this.randomize = new SettingGroup(this, "Randomize", true, this.rotations);
       this.randomType = new StringValue(this, "RandomType", "SecureRandom", new String[]{"Random", "SecureRandom", "Gaussian", "Intave"}, this.randomize);
-      String[] strings = !Augustus.getInstance().getUsername().equals("7yns")
-            && !Augustus.getInstance().getUsername().equals("xaelo")
-            && !Augustus.getInstance().getUsername().equals("goatqjudoo")
-         ? new String[]{
-            "None", "Basic", "Doubled", "OnlyRotation", "Hybrid", "PolarTest", "Circle", "Advanced", "Noise", "Turbo", "Noise2", "Noise3", "LegitTest"
-         }
-         : new String[]{
+      String[] strings = new String[]{
             "None", "Basic", "Doubled", "OnlyRotation", "Hybrid", "PolarTest", "Circle", "Advanced", "Noise", "Turbo", "Noise2", "Noise3", "LegitTest", "AI"
          };
       SettingGroup randomize2 = this.randomize;
